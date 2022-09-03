@@ -37,6 +37,8 @@ const rightTitle = ref([
   justify-content: space-between;
   font-size: 14px;
   box-shadow: inset 0 -1px #f1f2f3;
+  background-color: #343a40;
+  color: #f1f2f3;
 }
 .main_left {
   width: 20%;
@@ -44,6 +46,7 @@ const rightTitle = ref([
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 .main_right {
   width: 20%;
@@ -51,5 +54,6 @@ const rightTitle = ref([
   display: flex;
   justify-content: space-around;
   align-items: center;
+  cursor: pointer;
 }
 </style>

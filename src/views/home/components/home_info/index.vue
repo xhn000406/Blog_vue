@@ -1,6 +1,11 @@
 <template>
   <div id="home_info">
-    <div class="author"><img src="" alt="" /></div>
+    <div class="author">
+      <img
+        src="https://pics2.baidu.com/feed/2934349b033b5bb5d1a95b75b3edbe33b700bc83.jpeg?token=b00674d519b393e0cdcccbc080309126"
+        alt=""
+      />
+    </div>
     <template v-for="item in titleName" :key="item.title">
       <div class="title">
         <div>{{ item.title }}</div>
@@ -35,7 +40,7 @@ const titleName = ref([
   flex-direction: column;
   align-items: center;
 }
-.author {
+.author img {
   width: 140px;
   height: 140px;
   background-color: pink;
