@@ -14,14 +14,21 @@
       </div>
     </div>
   </div>
-  <Chatting class="chatting" v-if="isShow"></Chatting>
+  <bgCover :showCover="isShow"></bgCover>
+
+  <chattIng class="chatting" v-if="isShow" @emitsClose="closeItem"></chattIng>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import Chatting from '../../../../components/chatting/index.vue'
+import chattIng from '../../../../components/chattIng/index.vue'
+import bgCover from '../../../../components/bgCover/index.vue'
 
 const isShow = ref(true)
+
+const closeItem = (e) => {
+  isShow.value = e
+}
 
 const leftTitle = ref([
   { id: 1, title: '首页' },
@@ -37,7 +44,7 @@ const rightTitle = ref([
 const itemClick = (e) => {
   console.log()
   if (e == 4) {
-    isShow.value =  !isShow.value
+    isShow.value = !isShow.value
   }
 }
 </script>

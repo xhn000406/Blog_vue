@@ -35,6 +35,7 @@ const titleName = ref([
 #home_info {
   width: 300px;
   height: 300px;
+  margin-left: 10px;
   background-color: red;
   display: flex;
   flex-direction: column;

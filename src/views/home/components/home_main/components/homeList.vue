@@ -1,5 +1,5 @@
 <template>
-  <div id="listMain">
+  <div class="listMain">
     <template v-for="item in artcleList" :key="item.name">
       <div class="item_main">
         <div class="item_box">
@@ -79,6 +79,11 @@ const artcleList = ref([
 </script>
 
 <style scoped>
+.listMain {
+  width: 100%;
+  height: 900px;
+  background-color: #ffffff;
+}
 .item_box {
   display: flex;
   width: 90%;
@@ -109,6 +114,7 @@ const artcleList = ref([
   overflow: hidden;
 }
 .item_main {
+  margin-top: 10px;
   width: 99%;
   height: auto;
   display: flex;

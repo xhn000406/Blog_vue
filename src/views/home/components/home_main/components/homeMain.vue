@@ -19,11 +19,13 @@
         </div>
       </div>
     </div>
+    <slot></slot>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import HomeList from './homeList.vue'
 
 const tableIndex = ref(0)
 
@@ -55,7 +57,6 @@ const itemClick = (e) => {
 #home_main {
   width: 100%;
   height: auto;
-  margin-right: 10px;
   background-color: #ffffff;
 }
 .home_title {
