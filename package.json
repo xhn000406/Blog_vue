@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "element-plus": "^2.2.16",
     "lib-flexible": "^0.3.2",
     "postcss-px2rem": "^0.3.0",

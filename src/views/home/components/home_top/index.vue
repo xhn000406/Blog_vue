@@ -24,7 +24,7 @@ import { ref } from 'vue'
 import chattIng from '../../../../components/chattIng/index.vue'
 import bgCover from '../../../../components/bgCover/index.vue'
 
-const isShow = ref(true)
+const isShow = ref(false)
 
 const closeItem = (e) => {
   isShow.value = e

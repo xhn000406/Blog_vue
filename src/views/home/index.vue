@@ -2,7 +2,7 @@
   <div id="home">
     <Home_top></Home_top>
     <div class="main">
-      <Home_main></Home_main>
+      <div id="homeMain"><router-view></router-view></div>
       <Home_info></Home_info>
     </div>
   </div>
@@ -18,6 +18,12 @@ import Home_info from './components/home_info/index.vue'
 .main {
   display: flex;
   justify-content: center;
-
+  margin-top: 10px;
+}
+#homeMain {
+  width: 900px;
+  height: auto;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 </style>

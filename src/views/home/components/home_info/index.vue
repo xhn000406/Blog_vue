@@ -1,18 +1,24 @@
 <template>
   <div id="home_info">
     <div class="author">
-      <img
-        src="https://pics2.baidu.com/feed/2934349b033b5bb5d1a95b75b3edbe33b700bc83.jpeg?token=b00674d519b393e0cdcccbc080309126"
-        alt=""
-      />
+      <img src="https://avatars.githubusercontent.com/u/103575415?v=4" alt="" />
     </div>
     <template v-for="item in titleName" :key="item.title">
       <div class="title">
-        <div>{{ item.title }}</div>
-        :
         <div>{{ item.value }}</div>
       </div>
     </template>
+    <div class="articleBox">
+      <template v-for="item in article" :key="item.key">
+        <div class="artileCount">
+          <span class="count">{{ item.count }}</span>
+          <span class="title">{{ item.title }}</span>
+        </div>
+      </template>
+    </div>
+    <div class="linkClass">
+      <a href="https://github.com/xhn000406" title="gitHub">git</a>
+    </div>
   </div>
 </template>
 
@@ -21,22 +27,36 @@ import { ref } from 'vue'
 
 const titleName = ref([
   {
-    title: '姓名',
     value: '徐浩楠'
   },
   {
-    title: '目标',
-    value: '找份实习工作'
+    value: '我是一只小熊猫'
+  }
+])      
+
+const article = ref([
+  {
+    count: '5',
+    title: '文章数'
+  },
+  {
+    count: '5',
+    title: '文章数'
+  },
+  {
+    count: '5',
+    title: '文章数'
   }
 ])
 </script>
 
-<style scoped>
+<style scoped lang="less">
 #home_info {
   width: 300px;
   height: 300px;
   margin-left: 10px;
-  background-color: red;
+  background-color: #fff;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +69,43 @@ const titleName = ref([
 }
 .title {
   display: flex;
+  color: #606266;
   font-size: 14px;
   margin-top: 8px;
+}
+.artileCount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100px;
+  margin-bottom: 30px;
+  .count {
+    margin-bottom: 4px;
+    font-size: 20px;
+  }
+}
+.articleBox {
+  padding-top: 20px;
+  width: 90%;
+  height: 80px;
+  display: flex;
+  border-bottom: 1px inset #303133;
+}
+.artileCount:last-child::after {
+  content: '';
+  display: none;
+}
+.artileCount::after {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  content: '';
+  width: 1px;
+  height: 30px;
+  background: #303133;
+}
+.linkClass {
+  margin: 10px 0px 10px 0px;
 }
 </style>
