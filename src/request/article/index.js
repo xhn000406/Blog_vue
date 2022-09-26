@@ -6,3 +6,4 @@ export function apiGetArticleData(id) {
     method: 'get'
   })
 }
+        

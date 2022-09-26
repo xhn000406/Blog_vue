@@ -18,7 +18,7 @@ import Home_info from './components/home_info/index.vue'
 .main {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  padding: 10px;
 }
 #homeMain {
   width: 900px;

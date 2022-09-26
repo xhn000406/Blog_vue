@@ -1,5 +1,5 @@
 <template>
-  <HomeMain id="homeMain"> </HomeMain>
+  <HomeMain id="homeMain"></HomeMain>
 </template>
 
 <script setup>

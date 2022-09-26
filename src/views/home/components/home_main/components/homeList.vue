@@ -13,10 +13,8 @@
             </div>
             <div class="content_details">
               <div>阅读量：{{ item.artcleDetails }}</div>
-              <div class="content_author">
-                <div class="author">作者：{{ item.author }}</div>
-                <div>日期：{{ item.createTime }}</div>
-              </div>
+              <div class="author">作者：{{ item.author }}</div>
+              <div>日期：{{ item.createTime }}</div>
             </div>
           </div>
         </div>
@@ -100,7 +98,26 @@ const pushRouter = (e) => {
 }
 .content_details {
   display: flex;
+  position: relative;
 }
+
+.content_details div {
+  margin-right: 10px;
+}
+.content_details ::after {
+  position: absolute;
+  background: #303133;
+  content: '';
+  width: 1px;
+  height: 13px;
+  transform: rotate(-15deg);
+  transition: all 0.2s;
+}
+
+.content_details :last-child::after {
+  background-color: #ffffff;
+}
+
 .content_author {
   display: flex;
   justify-content: space-between;

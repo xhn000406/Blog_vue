@@ -1,7 +1,11 @@
 <template>
-  <div>我是主业</div>
+  <div></div>
+  <InfoRecord></InfoRecord>
 </template>
 
-<script setup></script>
+<script setup>
+import InfoRecord from './components/infoRecord.vue'
+import { ref } from 'vue'
+</script>
 
-<style lang="scss" scoped></style>
+<style lang="less" scoped></style>
